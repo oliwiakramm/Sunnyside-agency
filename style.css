@@ -253,15 +253,8 @@ body {
   cursor: pointer;
 }
 
-.hero__txt {
-  margin-top: 5.7rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2.9rem;
-  align-items: center;
-}
-
 .primary__header {
+  margin-top: 5.7rem;
   font-size: clamp(2.5rem, 2rem + 2vw, 3.7rem);
   font-family: "Fraunces", serif;
   font-weight: 900;
@@ -270,10 +263,14 @@ body {
   text-align: center;
   letter-spacing: 7px;
   line-height: 1.2;
+  position: relative;
 }
 
-.arrow {
-  width: 2.23rem;
+.primary__header:after {
+  content: url(images/icon-arrow-down.svg);
+  position: absolute;
+  left: 48.7%;
+  top: 10rem;
   animation: moveUpDown 3s infinite;
 }
 
@@ -465,7 +462,7 @@ body {
   fill: var(--footer-clr);
 }
 
-.footer__list {
+.footer__nav {
   display: flex;
   align-items: center;
   gap: 3.6rem;
@@ -538,7 +535,7 @@ body {
 @media (min-width: 68em) {
   .hero {
     padding: 2rem 2.7rem;
-    min-height: 65.5vh;
+    min-height: 79vh;
   }
 
   .logo {
@@ -584,9 +581,8 @@ body {
     display: none;
   }
 
-  .hero__txt {
+  .primary__header {
     margin-top: 6.4rem;
-    gap: 5.2rem;
   }
 
   .row__img img {
@@ -601,8 +597,9 @@ body {
   }
 
   .secondary__heading {
-    margin-top: -0.7rem;
+    margin-top: -0.3rem;
     font-size: 2.46rem;
+    line-height: 1.25;
   }
 
   .more {
@@ -629,7 +626,7 @@ body {
 
   .secondary__heading.testimonial_header {
     font-size: 1.35rem;
-    margin-top: 0;
+    margin-top: 5px;
   }
 
   .testimonials__container {
@@ -642,11 +639,11 @@ body {
 
   .testimonial {
     max-width: 21.5rem;
-    gap: 3.5rem;
+    gap: 3.65rem;
   }
 
   figcaption {
-    margin-top: 1rem;
+    margin-top: 0.6rem;
     margin-left: -9px;
   }
 
