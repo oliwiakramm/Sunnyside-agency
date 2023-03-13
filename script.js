@@ -5,6 +5,11 @@ const navBtn = document.querySelector(".nav__btn"),
 
 navBtn.addEventListener("click", function () {
   nav.classList.toggle("open");
+  if (nav.classList.contains("open")) {
+    navBtn.setAttribute("aria-expanded", true);
+  } else {
+    navBtn.setAttribute("aria-expanded", false);
+  }
 });
 
 scrollLinks.forEach((link) => {
@@ -23,6 +28,7 @@ let callback = (entries) => {
   entries.forEach((entry) => {
     if (!entry.isIntersecting && nav.classList.contains("open")) {
       nav.classList.remove("open");
+      navBtn.setAttribute("aria-expanded", false);
     }
   });
 };
