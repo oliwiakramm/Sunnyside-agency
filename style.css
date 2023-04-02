@@ -179,7 +179,7 @@ body {
   background-size: cover;
   background-position: center;
   padding: 2.1rem 1.5rem;
-  min-height: 81vh;
+  min-height: 100vh;
   position: relative;
 }
 
@@ -535,7 +535,7 @@ body {
 @media (min-width: 68em) {
   .hero {
     padding: 2rem 2.7rem;
-    min-height: 79vh;
+    min-height: 100vh;
   }
 
   .logo {
@@ -594,6 +594,10 @@ body {
     text-align: left;
     gap: 2.1rem;
     margin-top: 5px;
+  }
+
+  .row__info {
+    max-width: 32rem;
   }
 
   .secondary__heading {
